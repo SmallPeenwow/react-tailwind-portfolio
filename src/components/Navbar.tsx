@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
 import useMediaQuery from '../hooks/useMediaQuery';
 import menuIcon from '../assets/menu-icon.svg';
 import closeIcon from '../assets/close-icon.svg';
@@ -10,30 +9,6 @@ type NavbarProps = {
 	isTopOfPage: boolean;
 	setSelectedPage: (active: string) => void;
 };
-
-// type LinkProps = {
-// 	page: string;
-// 	selectedPage: string;
-// 	setSelectedPage: (active: string) => void;
-// };
-
-// const setPageSelected = (page: string) => {
-// 	setPageSelected(page);
-// };
-
-// const Link = ({ page, selectedPage, setSelectedPage }: LinkProps) => {
-// 	const lowerCasePage = page.toLowerCase();
-
-// 	return (
-// 		<AnchorLink
-// 			className={`${selectedPage === lowerCasePage ? 'text-yellow' : 'text-white'} hover:text-yellow transition duration-500`}
-// 			href={`#${lowerCasePage}`}
-// 			onClick={() => setPageSelected(lowerCasePage)}
-// 		>
-// 			{page}
-// 		</AnchorLink>
-// 	);
-// };
 
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: NavbarProps) => {
 	const [isMenuToggled, setIsMenuToggled] = useState(false);
