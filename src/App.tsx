@@ -6,6 +6,7 @@ import Landing from './components/Landing';
 import LineGradient from './components/LineGradient';
 import MySkills from './components/MySkills';
 import Projects from './components/Projects';
+import Testimonials from './components/Testimonials';
 
 function App() {
 	const [selectedPage, setSelectedPage] = useState('home');
@@ -14,7 +15,10 @@ function App() {
 
 	useEffect(() => {
 		const handleScroll = () => {
-			if (window.scrollY === 0) setIsTopOfPage(true);
+			if (window.scrollY === 0) {
+				setIsTopOfPage(true);
+				setSelectedPage('home');
+			}
 			if (window.scrollY !== 0) setIsTopOfPage(false);
 		};
 
@@ -36,6 +40,10 @@ function App() {
 			<LineGradient width='w-full' />
 			<div className='w=5/6 mx-auto'>
 				<Projects />
+			</div>
+			<LineGradient width='w-full' />
+			<div className='w=5/6 mx-auto md:h-full'>
+				<Testimonials />
 			</div>
 		</div>
 	);
