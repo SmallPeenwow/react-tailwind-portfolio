@@ -4,6 +4,8 @@ import Navbar from './components/Navbar';
 import DotGroup from './components/DotGroup';
 import Landing from './components/Landing';
 import LineGradient from './components/LineGradient';
+import MySkills from './components/MySkills';
+import Projects from './components/Projects';
 
 function App() {
 	const [selectedPage, setSelectedPage] = useState('home');
@@ -27,7 +29,14 @@ function App() {
 				{isAboveMediumScreens && <DotGroup selectedPage={selectedPage} setSelectedPage={setSelectedPage} />}
 				<Landing setSelectedPage={setSelectedPage} />
 			</div>
-			<LineGradient />
+			<LineGradient width='w-full' />
+			<div className='w-5/6 mx-auto md:h-full'>
+				<MySkills />
+			</div>
+			<LineGradient width='w-full' />
+			<div className='w=5/6 mx-auto'>
+				<Projects />
+			</div>
 		</div>
 	);
 }

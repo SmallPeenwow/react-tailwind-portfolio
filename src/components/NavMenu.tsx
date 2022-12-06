@@ -12,6 +12,10 @@ type NavMenuProps = {
 const Link = ({ page, selectedPage, setSelectedPage }: LinkProps) => {
 	const lowerCasePage = page.toLowerCase();
 
+	const setPageSelected = (page: string) => {
+		setSelectedPage(page);
+	};
+
 	return (
 		<AnchorLink
 			className={`${selectedPage === lowerCasePage ? 'text-yellow' : 'text-white'} hover:text-yellow transition duration-500`}
@@ -21,10 +25,6 @@ const Link = ({ page, selectedPage, setSelectedPage }: LinkProps) => {
 			{page}
 		</AnchorLink>
 	);
-};
-
-const setPageSelected = (page: string) => {
-	setPageSelected(page);
 };
 
 const NavMenu = ({ selectedPage, setSelectedPage }: NavMenuProps) => {

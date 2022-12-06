@@ -1,7 +1,9 @@
-import React from 'react';
+type LineGradientProps = {
+	width: string;
+};
 
-const LineGradient = () => {
-	return <div>LineGradient</div>;
+const LineGradient = ({ width }: LineGradientProps) => {
+	return <div className={`h-0.5 ${width} bg-gradient-rainblue`}></div>;
 };
 
 export default LineGradient;
