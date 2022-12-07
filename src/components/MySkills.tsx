@@ -25,7 +25,7 @@ const MySkills = () => {
 					<p className='mt-10 mb-7'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, nostrum.</p>
 				</motion.div>
 
-				<div className='mt-16 md:mt-0'>
+				<div className='mt-16 md:mt-0 mr-20'>
 					{isAboveMediumScreens ? (
 						<div className='relative z-0 ml-20 before:absolute before:-top-10 before:-left-10 before:w-full before:h-full before:border-2 before:border-blue before:z-[-1]'>
 							<img alt='skills' className='z-10' src={skillsImage} />
