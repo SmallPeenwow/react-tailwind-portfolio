@@ -2,6 +2,7 @@ import LineGradient from './LineGradient';
 import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
 import contactImg from '../assets/contact-image.jpeg';
+import { VITE_APP_EMAIL } from '../envValues';
 
 const Contact = () => {
 	const {
@@ -10,7 +11,7 @@ const Contact = () => {
 		formState: { errors },
 	} = useForm();
 
-	const onSubmit = async (e: any) => {
+	const onSubmit = async (e: React.MouseEvent<HTMLFormElement>) => {
 		const isValid = await trigger();
 
 		if (!isValid) {
@@ -60,7 +61,7 @@ const Contact = () => {
 					transition={{ delay: 0.2, duration: 0.5 }}
 					variants={{ hidden: { opacity: 0, y: 50 }, visible: { opacity: 1, y: 0 } }}
 				>
-					<form target='_blank' onSubmit={onSubmit} action='b49ad28b396745a93f258488eca19006' method='POST'>
+					<form target='_blank' onSubmit={onSubmit} action={`https://formsubmit.co/${VITE_APP_EMAIL}`} method='POST'>
 						<input
 							className='w-full bg-blue font-semibold placeholder-opaque-black p-3'
 							type='text'

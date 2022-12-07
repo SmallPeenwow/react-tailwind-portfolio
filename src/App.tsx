@@ -50,19 +50,19 @@ function App() {
 			</div>
 			<LineGradient width='w-full' />
 			<div className='w=5/6 mx-auto'>
-				<motion.div onViewportEnter={() => changeSelectedPage('projects')}>
+				<motion.div viewport={{ amount: 'some' }} onViewportEnter={() => changeSelectedPage('projects')}>
 					<Projects />
 				</motion.div>
 			</div>
 			<LineGradient width='w-full' />
 			<div className='w=5/6 mx-auto md:h-full'>
-				<motion.div viewport={{ amount: 'all' }} onViewportEnter={() => changeSelectedPage('testimonials')}>
+				<motion.div viewport={{ amount: 0.8 }} onViewportEnter={() => changeSelectedPage('testimonials')}>
 					<Testimonials />
 				</motion.div>
 			</div>
 			<LineGradient width='w-full' />
 			<div className='w-5/6 mx-auto md:h-full'>
-				<motion.div viewport={{ amount: 'all' }} onViewportEnter={() => changeSelectedPage('contact')}>
+				<motion.div viewport={{ amount: 0.8 }} onViewportEnter={() => changeSelectedPage('contact')}>
 					<Contact />
 				</motion.div>
 			</div>
